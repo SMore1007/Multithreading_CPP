@@ -15,10 +15,3 @@ A thread is the smallest unit of execution within a process. A program can have 
 
     Concurrency: Handles multiple tasks simultaneously, such as network requests and computations.
 
-
-# How to run a file
-
-'''
-g++ fileName.cpp -o executableName -pthread
-
-'''
