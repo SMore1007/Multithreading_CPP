@@ -31,8 +31,11 @@ int main()
     thread t1(thread_1); // Creating a object for thread 
     thread t2(thread_2);
 
+    /* wait till complete the threads of execution*/
     t1.join();
     t2.join();
+
+    /* Dont wait till threads is comeplete, run the threads in background and execution thread go below*/
     // t2.detach();
     // t1.detach();
 
