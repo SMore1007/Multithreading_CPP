@@ -15,3 +15,11 @@ A thread is the smallest unit of execution within a process. A program can have 
 
     Concurrency: Handles multiple tasks simultaneously, such as network requests and computations.
 
+    Ex: the browser has multiple tabs that can be different threads
+
+3. Way to create the threads
+    1. Function pointer
+    2. lambda function
+    3. Functors
+    4. Member Functions
+    5. Static Member Functions
