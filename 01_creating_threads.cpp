@@ -1,6 +1,6 @@
 #include<iostream> // for input and output
-#include<thread> // for threading
-#include<chrono> // for time functions
+#include<thread>   // for threading
+#include<chrono>   // for time functions
 
 using namespace std;  // for standad names
 
@@ -30,7 +30,7 @@ int main()
     thread worker1(_thread1);
     thread worker2(_thread2);
 
-    worker1.join();
+    worker1.join();  // Wait for the thread to finish
     worker2.join();
     cout<< "\n";
 }
