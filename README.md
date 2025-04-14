@@ -288,7 +288,8 @@ int main()
     What is a deadlock, and how can you prevent it?
 
     A deadlock occurs when two or more threads are waiting for each other to release locks.
-    Prevention techniques include avoiding nested locks, using std::lock(), and following a consistent locking order.
+    Prevention techniques include avoiding nested locks, using std::lock(), and following a
+    consistent locking order.
 
     What is a condition variable in C++?
 
@@ -302,12 +303,13 @@ int main()
 
     What is an atomic operation in C++?
 
-    An atomic operation is an operation that completes in a single step, preventing race conditions, provided by std::atomic<T>.
+    An atomic operation is an operation that completes in a single step, preventing race
+    conditions, provided by std::atomic<T>.
 
     What is the difference between std::mutex and std::shared_mutex?
 
-    std::mutex allows exclusive access, while std::shared_mutex supports multiple readers and a
-    single writer at a time.
+    std::mutex allows exclusive access, while std::shared_mutex supports multiple readers 
+    and a single writer at a time.
 
 ### Performance & Debugging
 
