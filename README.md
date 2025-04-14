@@ -231,11 +231,13 @@ int main()
 
     What is multithreading in C++?
 
-        Multithreading is a technique where multiple threads run in parallel within a single process to achieve concurrency.
+        Multithreading is a technique where multiple threads run in parallel within 
+        a single process to achieve concurrency.
 
     What is the difference between a process and a thread?
 
-        A process is an independent executing instance with its own memory, while a thread is a lightweight sub-unit of a process that shares the same memory.
+        A process is an independent executing instance with its own memory, 
+        while a thread is a lightweight sub-unit of a process that shares the same memory.
 
     How do you create a thread in C++?
 
@@ -246,47 +248,57 @@ int main()
 
     What is the difference between join() and detach()?
 
-        join() blocks execution until the thread completes, while detach() allows the thread to run independently in the background.
+        join() blocks execution until the thread completes, 
+        while detach() allows the thread to run independently in the background.
 
     What are the advantages of using multithreading?
 
-        Improved performance, better CPU utilization, responsiveness, and parallel execution.
+        Improved performance, better CPU utilization, responsiveness, 
+        and parallel execution.
 
 ### Synchronization & Thread Safety
 
     What are race conditions?
 
-        A race condition occurs when multiple threads access shared data concurrently, leading to unpredictable results.
+        A race condition occurs when multiple threads access shared data concurrently, 
+        leading to unpredictable results.
 
     How do you prevent race conditions in C++?
 
-        By using synchronization mechanisms like std::mutex, std::lock_guard, or std::unique_lock.
+        By using synchronization mechanisms like std::mutex, std::lock_guard, 
+        or std::unique_lock.
 
     What is std::mutex?
 
-        A std::mutex (mutual exclusion) is used to lock a shared resource so that only one thread can access it at a time.
+        A std::mutex (mutual exclusion) is used to lock a shared resource 
+        so that only one thread can access it at a time.
 
     What is std::lock_guard?
 
-        std::lock_guard is an RAII-based mutex wrapper that automatically releases the lock when it goes out of scope.
+        std::lock_guard is an RAII-based mutex wrapper that automatically 
+        releases the lock when it goes out of scope.
 
     What is std::unique_lock?
 
-    std::unique_lock provides more flexibility than std::lock_guard, supporting features like defer_lock, try_lock, and adopt_lock.
+    std::unique_lock provides more flexibility than std::lock_guard, 
+    supporting features like defer_lock, try_lock, and adopt_lock.
 
 ### Advanced Concepts
 
     What is a deadlock, and how can you prevent it?
 
-    A deadlock occurs when two or more threads are waiting indefinitely for each other to release locks. Prevention techniques include avoiding nested locks, using std::lock(), and following a consistent locking order.
+    A deadlock occurs when two or more threads are waiting for each other to release locks.
+    Prevention techniques include avoiding nested locks, using std::lock(), and following a consistent locking order.
 
     What is a condition variable in C++?
 
-    A std::condition_variable is used for thread synchronization, allowing a thread to wait for a condition to be met before proceeding.
+    A std::condition_variable is used for thread synchronization, 
+    allowing a thread to wait for a condition to be met before proceeding.
 
     What is a thread pool?
 
-    A thread pool is a collection of pre-created threads that are reused to perform tasks efficiently instead of creating and destroying threads repeatedly.
+    A thread pool is a collection of pre-created threads that are reused to perform tasks
+    efficiently instead of creating and destroying threads repeatedly.
 
     What is an atomic operation in C++?
 
@@ -294,27 +306,33 @@ int main()
 
     What is the difference between std::mutex and std::shared_mutex?
 
-    std::mutex allows exclusive access, while std::shared_mutex supports multiple readers and a single writer at a time.
+    std::mutex allows exclusive access, while std::shared_mutex supports multiple readers and a
+    single writer at a time.
 
 ### Performance & Debugging
 
     How do you measure the performance impact of multithreading?
 
-    By using timing functions like std::chrono::high_resolution_clock and profiling tools such as Valgrind or Perf.
+    By using timing functions like std::chrono::high_resolution_clock and profiling tools
+    such as Valgrind or Perf.
 
     What is false sharing in multithreading?
 
-    False sharing occurs when multiple threads modify separate variables that share the same cache line, leading to unnecessary cache invalidations.
+    False sharing occurs when multiple threads modify separate variables that share the 
+    same cache line, leading to unnecessary cache invalidations.
 
     What is thread affinity?
 
-    Thread affinity binds a thread to a specific CPU core to optimize performance and cache locality.
+    Thread affinity binds a thread to a specific CPU core to optimize performance 
+    and cache locality.
 
     What is a spinlock, and when should you use it?
 
-    A spinlock is a type of lock where a thread continuously checks for a lock instead of sleeping, useful for short critical sections where sleeping overhead is costly.
+    A spinlock is a type of lock where a thread continuously checks for a lock instead of 
+    sleeping, useful for short critical sections where sleeping overhead is costly.
 
     How does C++ handle exceptions in multithreading?
 
-    C++ does not propagate exceptions across threads; exceptions must be caught inside the thread function and communicated using std::promise or std::future.
-
+    C++ does not propagate exceptions across threads; 
+    exceptions must be caught inside the thread function and 
+    communicated using std::promise or std::future.
