@@ -1,10 +1,11 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
-#include <functional>  // Missing header included
+#include <functional> 
 
 using namespace std;
 using namespace std::chrono;
+using namespace std::chrono_literals;
 
 // Thread function
 void worker(function<void(int)> cb) {

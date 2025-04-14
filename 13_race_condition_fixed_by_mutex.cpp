@@ -12,7 +12,7 @@ void increment(int num)
 {
     for (int  i = 0; i < num; i++)
     {
-        
+        lock_guard<mutex> lock(mtx); // mutex as locking 
         counter++;
     }
 }

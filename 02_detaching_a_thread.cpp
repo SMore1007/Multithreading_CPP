@@ -26,7 +26,7 @@ int main()
     {
         cout << "In main " << endl;
 
-        this_thread::sleep_for(seconds(2));
+        this_thread::sleep_for(seconds(1));
     }
     
     return 0;

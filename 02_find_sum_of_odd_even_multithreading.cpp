@@ -48,7 +48,7 @@ int main()
     t2.join(); 
 
     auto endTime = high_resolution_clock::now(); // End time measurement
-    auto duration = duration_cast<microseconds>(endTime - startTime); // Corrected syntax
+    auto duration = duration_cast<microseconds>(endTime - startTime); 
 
     cout << "Total Duration: " << duration.count() << " microseconds" << endl; // Use .count() for output
     cout << "Even Sum: " << evenSum << endl;

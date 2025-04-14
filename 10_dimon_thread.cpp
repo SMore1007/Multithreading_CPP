@@ -26,11 +26,11 @@ void Daemon2()
 }
 int main()
 {
-    thread t1(Daemon); // Creating a thread object
-    t1.detach(); // Run the daemon thread in background
+    thread t1(Daemon);  // Creating a thread object
+    t1.detach();        // Run the daemon thread in background
 
     thread t2(Daemon2); // Create the thread 2
-    t2.detach();  // run it in  background
+    t2.detach();        // run it in  background
 
     while (1){}
     
