@@ -1,7 +1,7 @@
 # Multithreading in C++
 
 ## Introduction
-Multithreading is the ability of a program to execute multiple threads concurrently. In C++, multithreading is primarily supported through the `<thread>` header, introduced in C++11. Threads allow efficient execution of tasks in parallel, improving performance, responsiveness, and resource utilization.
+Multithreading in C++ is a programming technique that allows a program to execute multiple threads concurrently. Threads are lightweight processes that share the same memory space and can perform tasks independently, enhancing the program's efficiency and responsiveness. C++ provides libraries, like std::thread, for creating and managing threads. Multithreading is particularly useful for tasks that can be parallelized, such as handling multiple user requests or improving performance in multi-core processors.
 
 ## What is a Thread?
 A thread is the smallest unit of execution within a process. A process can have multiple threads that share the same memory space but execute independently.
@@ -29,6 +29,9 @@ int main()
 ```
 
 #### Using a Lambda Function
+
+Lambda expressions provide a concise way to define anonymous functions in C++. They can capture variables from their enclosing scope and are often used as callable objects for creating threads. When launching a thread with a lambda, you pass the lambda itself to the std::thread constructor.
+
 ```cpp
 #include <iostream>
 #include <thread>
